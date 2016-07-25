@@ -37,7 +37,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<h2>DOLPINI</h2>
-					<p>Share the truth, blast the opinion.</p>
+					<p>Share the truth, blast the opinion. !</p>
 					<ul class="actions">
 						<li><a href="<?php echo e(url('/login')); ?>" class="button special">Sign In</a></li>
 						<li><a href="#" class="button">Learn More</a></li>
@@ -79,7 +79,7 @@
 							</div>
 							</section>
 
-							<a href="<?php echo e(url('/post/detail',$p->id)); ?>"><i class="badge badge-info"> Lihat lebih detail..</i></a>
+							<a href="<?php echo e(url('/post/detail',$p->id)); ?>"><i class="badge badge-info"> Lihat lebih lanjut..</i></a>
 
 					</section>
 					<?php endforeach; ?>

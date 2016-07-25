@@ -306,13 +306,25 @@ class PostController extends Controller
                                         else if($value['type'] == 'youtube')
                                         {
                                             //bersihkan youtube url ambil var nya aja.
-                                            $getVar = substr($value['content'], strpos($value['content'], "=") + 1);    
-                                            $inputDetails['content'] = $getVar;
+                                                $tmp = explode('/', $value['content']);
+                                                $var = end($tmp);
+                                                //jika masih ada variable watch=?blablabla
+                                                if(strpos($var, 'watch') !== false)
+                                                {
+                                                    $getVar = substr($value['content'], strpos($value['content'], "=") + 1);    
+                                                    $inputDetails['content'] = explode('&',$getVar)[0];
+                                                }
+                                                //kalo udah dapet var nya
+                                                else
+                                                {
+                                                    $inputDetails['content'] = $var;
+                                                }
+
                                              PostDetail::create($inputDetails);
                                         }
                                         else
                                         { 
-                                             $inputDetails['content'] = $value['content'];
+                                            $inputDetails['content'] = $value['content'];
                                             PostDetail::create($inputDetails);
                                         }
 
