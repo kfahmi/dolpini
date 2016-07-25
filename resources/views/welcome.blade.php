@@ -37,7 +37,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<h2>DOLPINI</h2>
-					<p>Share the truth, blast the opinion.</p>
+					<p>Share the truth, blast the opinion. !</p>
 					<ul class="actions">
 						<li><a href="{{url('/login')}}" class="button special">Sign In</a></li>
 						<li><a href="#" class="button">Learn More</a></li>
